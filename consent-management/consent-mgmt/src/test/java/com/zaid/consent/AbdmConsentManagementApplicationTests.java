@@ -1,4 +1,4 @@
-package com.zaid.consent;
+package com.abdm.consent;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

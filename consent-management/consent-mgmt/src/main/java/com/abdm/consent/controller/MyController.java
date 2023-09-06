@@ -1,4 +1,4 @@
-package com.zaid.consent.controller;
+package com.abdm.consent.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;

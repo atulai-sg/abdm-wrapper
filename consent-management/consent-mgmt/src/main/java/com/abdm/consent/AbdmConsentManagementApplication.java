@@ -1,4 +1,4 @@
-package com.zaid.consent;
+package com.abdm.consent;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
