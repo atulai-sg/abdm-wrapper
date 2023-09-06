@@ -14,19 +14,7 @@ import java.util.Arrays;
 
 @RequestMapping("/v1.0")
 public class ConsentMgmntHIUController {
-
-
-
-
-
-
 	private String accessToken="insert your access token here";
-
-
-
-
-
-
 	//Creating consent request
 
 
@@ -48,7 +36,7 @@ public class ConsentMgmntHIUController {
 		System.out.println(sample.getRequestId());
 		Consentgranted consent=new Consentgranted(sample.getConsent().toString());
 		consentGrantStatusRepo.save(consent);
-		//wew ill req id vs availability gfranrt
+		//we will require request id  vs its availibity for that consent till now
 		//default int false
 
 		System.out.println("all consents till now with their grant status");

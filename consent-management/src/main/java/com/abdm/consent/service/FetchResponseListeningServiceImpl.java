@@ -8,7 +8,7 @@ import java.util.UUID;
 
 
 @Service
-public class Fetch_Response_Listening_ServiceImpl implements Fetch_Response_Listening_Service{
+public class FetchResponseListeningServiceImpl implements FetchResponseListeningService {
     List<ConsentArtefactResponse> all;
 
 

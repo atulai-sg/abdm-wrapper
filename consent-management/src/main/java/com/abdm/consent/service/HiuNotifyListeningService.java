@@ -1,14 +1,14 @@
 package com.abdm.consent.service;
 
 import java.util.List;
+import java.util.UUID;
 //import com.abdm.consent.models.HIPConsentNotification;
 import com.abdm.consent.models.HIUConsentNotificationResponse;
-import com.abdm.consent.models.HIUConsentRequestStatus;
 
 
-public interface Hiu_Notify_Listening_Service {
+public interface HiuNotifyListeningService {
     public List<HIUConsentNotificationResponse> getallhiuconsentnotificationresponse();
-    public HIUConsentNotificationResponse getallhiuconsentnotificationresponse(String reqid);
+    public HIUConsentNotificationResponse gethiuconsentnotificationresponse(UUID reqid);
 
     public HIUConsentNotificationResponse addhiuconsentnotificationresponse(HIUConsentNotificationResponse c);
     public HIUConsentNotificationResponse updatehiuconsentnotificationsresponse(HIUConsentNotificationResponse c);

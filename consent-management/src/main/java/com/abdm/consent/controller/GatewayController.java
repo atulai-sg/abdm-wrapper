@@ -6,10 +6,8 @@ import com.abdm.consent.repo.ConsentArtefactFetchrepo;
 import com.abdm.consent.repo.ConsentGrantStatusRepo;
 import com.abdm.consent.service.*;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -68,7 +66,7 @@ public class GatewayController {
 
     @Autowired
 
-    private Fetch_Response_Listening_Service fetchResponseListeningService;
+    private FetchResponseListeningService fetchResponseListeningService;
 
 
     @Autowired
@@ -99,7 +97,7 @@ public class GatewayController {
     //on-status resulting callback from gateway of the consent request status
 
     @Autowired
-    private On_Status_Listening_Service onStatusListeningService;
+    private OnStatusListeningService onStatusListeningService;
 
 
     @Autowired
@@ -110,7 +108,7 @@ public class GatewayController {
 
         //here we will be doing exception handling using try catch block
         try{
-            this.onStatusListeningService.addConsentArtefactResponse(consentstatusresponse);
+            this.onStatusListeningService.addConsentRequestStatus(consentstatusresponse);
             return new ResponseEntity<>(HttpStatus.OK);
             //here we will be updating the status of consent grant in the mongodb that is connected to this application
             //atlast try to add some unit test cases for the init api calls
@@ -148,7 +146,7 @@ public class GatewayController {
 
     @Autowired
 
-    private Hiu_Notify_Listening_Service hiuNotifyListeningService;
+    private HiuNotifyListeningService hiuNotifyListeningService;
     @PostMapping("consents/hiu/notify")
 
     public ResponseEntity<HttpStatus> hiunotfiylisten(@RequestBody HIUConsentNotificationResponse hiuConsentNotificationResponse, String authorization, String X_HIU_ID){
